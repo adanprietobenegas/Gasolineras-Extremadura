@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #76b6c5 0%, #b8bdc2 100%) !important;
+}
+
+h1 {
+    text-align: center;
+    color: #F0F8FF !important;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.station {
+    background-color: #F0F8FF !important; /* gris claro, más visible */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0e0e0;
+    padding: 18px 22px;
+    min-width: 260px;
+    max-width: 320px;
+    margin: 16px; /* margen entre tarjetas */
+}
+
+.station:hover {
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.18);
+    transform: scale(1.03);
+}
+
+.station p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 8px 0;
+    color: #2d3e50;
+}
+
+button {
+    background-color: #2d3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 28px;
+    margin: 0 8px 16px 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 6px rgba(44, 62, 80, 0.08);
+}
+
+button:hover {
+    background-color: #1a2533;
+}
+
+button.activo {
+    background-color: #f39c12;
+    color: #fff;
+    border: 2px solid #e67e22;
+}
+
+.bg-barato {
+    background-color: #d4edda !important; /* verde claro */
+    border-color: #28a745 !important;
+}
+
+.bg-caro {
+    background-color: #f8d7da !important; /* rojo claro */
+    border-color: #dc3545 !important;
+}
+
+/* Padding responsive */
+@media (max-width: 700px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .station {
+        max-width: 95vw;
+        min-width: 0;
+    }
+}
